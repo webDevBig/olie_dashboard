@@ -1,7 +1,7 @@
 /*menu style*/
 
 .logo {
-    width: 94px;
+    width: 100%;
     height: 94px;
     background: #53A5E0;
     display: flex;
@@ -88,7 +88,7 @@
 .menu_list {
     background: #53A5E0;
     box-sizing: border-box;
-    width: fit-content;
+    width: 100%;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -103,7 +103,7 @@
 }
 
 .menu_list .menu_item {
-    width: 94px;
+    width: 100%;
     padding: 8px 0px;
     text-decoration: none;
     cursor: pointer;
