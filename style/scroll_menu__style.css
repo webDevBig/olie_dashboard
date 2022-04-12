@@ -114,7 +114,6 @@
 
 .tabs__links {
     /*    max-width: 1235px;*/
-    margin: 0 8px 0 0;
     overflow: hidden;
     /*will change this to hidden later to deny scolling to user*/
     white-space: nowrap;

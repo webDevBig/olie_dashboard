@@ -92,9 +92,11 @@ body {
 }
 */
 
+/*
 .table_content .table_box {
     border-bottom: 1px solid #ECF2F7;
 }
+*/
 
 .table th:last-of-type {
     padding: 14px 0 14px 8px;
@@ -208,7 +210,7 @@ body {
     border: 1px solid #ECF2F7;
     box-sizing: border-box;
     border-radius: 4px;
-    padding: 0 16px;
+    padding: 0 0 0 14px;
     font-size: 14px;
     line-height: 17px;
     color: #081E2E;
@@ -218,7 +220,7 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     background-image: url(../img/CalendarBlank.png);
-    background-position: 108px center;
+    background-position: 111px center;
     background-repeat: no-repeat;
     background-size: 18px;
     font-family: 'Futura Std Book';
@@ -243,6 +245,7 @@ body {
     background-repeat: no-repeat;
     opacity: 0;
     cursor: pointer;
+    display: none;
 }
 
 /*Icon + text button*/

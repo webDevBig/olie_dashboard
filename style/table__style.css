@@ -6,7 +6,7 @@
 
 .table {
     width: 100%;
-/*    max-width: 1300px;*/
+    /*    max-width: 1300px;*/
     text-align: left;
     border-collapse: collapse;
 }
@@ -34,6 +34,11 @@
     cursor: pointer;
 }
 
+.table tbody tr {
+    border-bottom: 1px solid #ECF2F7;
+
+}
+
 .table tr td:first-of-type {
     border-left: 2px solid white;
 }
@@ -50,8 +55,8 @@
 .check_row {
     background-color: #F7FBFF;
 }
-.table .check_row td:first-of-type
-{
+
+.table .check_row td:first-of-type {
     border-color: white;
 }
 

@@ -3,7 +3,6 @@
 
 .selected_box {
     width: 100%;
-    max-width: 1286px;
     display: flex;
     justify-content: space-between;
     align-items: center;
