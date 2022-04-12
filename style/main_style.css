@@ -686,11 +686,11 @@ body {
     }
 
     .date_input {
-        width: 115px;
-        padding: 0 10px;
-        font-size: 12px;
-        line-height: 15px;
-        background-position: 88px center;
+       width: 123px;
+    padding: 0 5px;
+    font-size: 12px;
+    line-height: 15px;
+    background-position: 96px center;
     }
 
     .paginator_box {
