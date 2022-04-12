@@ -1,0 +1,721 @@
+@import url('menu__style.css');
+@import url('scroll_menu__style.css');
+@import url('table__style.css');
+@import url('selected_stroke__style.css');
+@import url('pagination__style.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Futura Std Book';
+    font-style: normal;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+}
+
+.menu_content {
+    position: relative;
+}
+
+.content_box {
+    width: calc(100% - 94px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+
+}
+
+.content_box .header_box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    background-color: #F7FBFF;
+}
+
+.header_box .text {
+    font-size: 14px;
+    line-height: 17px;
+    color: #081E2E;
+    margin: 0 12px;
+}
+
+.content_box .tools_box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.content_box .btn,
+.content_box .search_input {
+    margin: 0 16px 0 0;
+}
+
+.help_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.table_content {
+    background-color: white;
+    padding: 16px 30px 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: calc(100% - 64px);
+}
+
+.table_content .tabs {
+    width: 100%;
+    height: 100%;
+}
+
+/*
+
+.table_content .tabs__links {
+    max-width: 1190px;
+}
+*/
+
+.table_content .table_box {
+    border-bottom: 1px solid #ECF2F7;
+}
+
+.table th:last-of-type {
+    padding: 14px 0 14px 8px;
+}
+
+.tabs__contents-item {
+    position: relative;
+}
+
+.tabs__contents-item .selected_box {
+    position: absolute;
+    bottom: 94px;
+    display: none;
+}
+
+.tabs__contents-item .selected_box.show {
+    display: flex;
+}
+
+.tab_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+.tabs__container {
+    width: 100%;
+}
+
+/*Primary button*/
+.btn {
+    height: 40px;
+    background-color: #E7F5FF;
+    border-radius: 4px;
+    padding: 11px 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 17px;
+    color: #53A5E0;
+    cursor: pointer;
+}
+
+.btn::before {
+    content: '';
+    background-image: url(../img/Plus_blue.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 18px;
+    height: 18px;
+    margin: 0 10px 0 0;
+}
+
+.btn.active {
+    color: white;
+    background-color: #53A5E0;
+}
+
+.btn.add_btn::before {
+    background-image: url(../img/Plus_white.png);
+}
+
+.content_box .scan_btn::before {
+    background-image: url(../img/Barcode_white.png);
+}
+
+/*Search input*/
+.search_input {
+    width: 374px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #ECF2F7;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 0 16px 0 42px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #081E2E;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../img/MagnifyingGlass.png);
+    background-position: 16px center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+}
+
+.search_input::placeholder {
+    color: #76858F;
+}
+
+.search_input:active,
+.search_input:focus {
+    border: 1px solid #ECF2F7;
+    outline: none;
+}
+
+/*Date input*/
+.date_input {
+    width: 143px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #ECF2F7;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #081E2E;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../img/CalendarBlank.png);
+    background-position: 108px center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    font-family: 'Futura Std Book';
+    cursor: pointer;
+}
+
+
+.date_input:active,
+.date_input:focus {
+    outline: none;
+}
+
+.date_input::-webkit-inner-spin-button {
+    display: none;
+}
+
+
+.date_input::-webkit-calendar-picker-indicator {
+    background-image: url(../img/CalendarBlank.png);
+    background-position: 108px center;
+    background-size: 18px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/*Icon + text button*/
+.text_btn {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    cursor: pointer;
+}
+
+.text_btn .icon {
+    margin: 0 8px 0 0;
+}
+
+
+
+/*Chekbox*/
+
+
+.form-group input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.form-group label {
+    position: relative;
+    cursor: pointer;
+}
+
+.form-group label:before {
+    content: '';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1.5px solid #A2B0BA;
+    border-radius: 1.5px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    box-sizing: border-box;
+}
+
+.form-group input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1.5px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/check.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form-group input:checked + label:before {
+    background-color: #53A5E0;
+    border-color: #53A5E0;
+}
+
+
+
+
+
+/*smal_btn*/
+.smal_btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.blue_btn {
+    background: #53A5E0;
+}
+
+.white_btn {
+    background: #FFFFFF;
+    border: 1px solid #ECF2F7;
+}
+
+.avatar {
+    border-radius: 50%;
+    background-image: url(../img/Avatar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.CN_box {
+    width: 94px;
+    height: 94px;
+    background: #53A5E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_user {
+    border-radius: 50%;
+    background-color: white;
+    font-size: 14px;
+    line-height: 17px;
+    color: #081E2E;
+    font-family: 'Futura Std Book';
+    padding: 12px 9px;
+    text-transform: uppercase;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.pop_up_show {
+    position: absolute;
+    z-index: 10;
+    min-width: 200px;
+    display: none;
+}
+
+.pop_up_show.show {
+    display: flex;
+}
+
+.avatar_pop_up_show {
+    bottom: 27px;
+    left: 91%;
+}
+
+.help_pop_up_show {
+    top: calc(100% + 7.5px);
+    right: 0%;
+    justify-content: flex-end;
+}
+
+.pop_up_box {
+    background: #F7FBFF;
+    border: 1px solid #ECF2F7;
+    padding: 15px 24px;
+    width: fit-content;
+    border-radius: 4px;
+    position: relative;
+}
+
+.pop_up_box::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #F7FBFF;
+    transform: rotate(45deg);
+}
+
+.pop_up_right::before {
+    border-bottom: 1px solid #ECF2F7;
+    border-left: 1px solid #ECF2F7;
+    left: -7.5px;
+    bottom: 8px;
+    border-radius: 0 0 0 2px;
+}
+
+.pop_up_bottom::before {
+    border-top: 1px solid #ECF2F7;
+    border-left: 1px solid #ECF2F7;
+    right: 15.5px;
+    top: -7.5px;
+    border-radius: 2px 0 0 0;
+}
+
+.pop_up_box ul {
+    list-style: none;
+    display: inline-grid;
+}
+
+.pop_up_box li {
+    margin: 6px 0;
+}
+
+.pop_up_box a {
+    font-size: 14px;
+    line-height: 17px;
+    color: #081E2E;
+    font-family: 'Futura Std Book';
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pop_up_box .list_icon {
+    max-width: 18px;
+    margin: 0 12px 0 0;
+}
+
+
+
+.icon_24 {
+    max-width: 24px;
+    cursor: pointer;
+}
+
+.icon_20 {
+    max-width: 20px;
+    cursor: pointer;
+}
+
+.icon_18 {
+    max-width: 18px;
+    cursor: pointer;
+}
+
+.icon_16 {
+    max-width: 16px;
+    cursor: pointer;
+}
+
+/*Category pop-up*/
+
+.category_box {
+    width: 233px;
+    height: 100%;
+    background: #F7FBFF;
+    border-right: 1px solid #ECF2F7;
+    position: absolute;
+    transform: translateX(-300px);
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: transform .3s;
+}
+
+.carriers_box.show {
+    transform: translateX(94px);
+}
+
+.category_box .category_header {
+    padding: 13px 16px;
+    border-bottom: 1px solid #ECF2F7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category_box .header_btn {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 19px;
+    color: #081E2E;
+}
+
+.category_box .header_btn img {
+    margin: 0 10px 0 0;
+}
+
+.category_box .close_btn img {
+    margin: 0;
+}
+
+.category_box .btn {
+    margin: 0;
+}
+
+.category_box .btn::before {
+    background-image: url(../img/GearSix_blue.png);
+}
+
+.category_box .category_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px;
+}
+
+.category_box .category_name {
+    width: 100%;
+    font-size: 16px;
+    line-height: 19px;
+    color: #081E2E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0 0;
+    cursor: pointer;
+}
+
+.category_box .category_list {
+    list-style: none;
+    border-bottom: 1px solid #ECF2F7;
+    padding: 7px 0 9px;
+    width: 100%;
+
+}
+
+.category_box .category_list li {
+    padding: 7px 0;
+    font-size: 16px;
+    line-height: 19px;
+    color: #76858F;
+    cursor: pointer;
+}
+
+/* width */
+.table_box::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+    background-color: white;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Track */
+.table_box::-webkit-scrollbar-track {
+    border-left: 3px solid white;
+}
+
+/* Handle */
+.table_box::-webkit-scrollbar-thumb {
+    background-color: #53A5E0;
+    border-radius: 7px;
+    border: 2px solid #ffffff;
+}
+
+@media all and (max-width:1200px) {
+    .content_box .search_input {
+        width: 300px;
+    }
+
+}
+
+@media all and (max-width:1100px) {
+    .content_box .tools_box {
+        flex-wrap: wrap;
+        width: 84%;
+    }
+
+    .date_input {
+        margin: 20px 0 0;
+    }
+
+    .header_box .text {
+        margin: 20px 12px 0;
+    }
+
+    .content_box .search_input {
+        width: 374px;
+    }
+
+    .content_box .header_box {
+        align-items: flex-start;
+
+    }
+}
+
+@media all and (max-width:900px) {
+
+    .content_box .search_input {
+        width: 54%;
+    }
+
+    .content_box .tools_box {
+        width: 94%;
+    }
+}
+
+@media all and (max-width:768px) {
+    .content_box .search_input {
+        margin: 20px 0px 0 0;
+        width: 100%;
+    }
+
+    .content_box .tools_box {
+        width: 100%;
+    }
+
+    .help_box {
+        position: absolute;
+        right: 30px;
+        z-index: 2;
+        height: 40px;
+    }
+}
+
+@media all and (max-width:500px) {
+    .menu_list .menu_item span {
+        display: none;
+    }
+
+    .menu_box {
+        width: 50px;
+    }
+
+    .content_box .header_box {
+        padding: 12px 20px;
+    }
+
+    .content_box {
+        width: calc(100% - 50px);
+    }
+
+    .table_content {
+        background-color: white;
+        padding: 16px 20px 5px;
+    }
+
+    .date_input {
+        width: 115px;
+        padding: 0 10px;
+        font-size: 12px;
+        line-height: 15px;
+        background-position: 88px center;
+    }
+
+    .paginator_box {
+        padding: 0;
+    }
+}
+
+@media all and (max-width:375px) {
+    .content_box .btn {
+        margin: 0 50px 0 0;
+    }
+
+    .content_box .scan_btn {
+        margin: 20px 50px 0 0;
+    }
+
+    .paginator_content .settings_btn {
+        margin: 0;
+    }
+
+}
+
+@media all and (max-width:340px) {
+    .date_input {
+        width: 97px;
+        padding: 0 1px;
+        font-size: 12px;
+        line-height: 15px;
+        background-position: 78px center;
+        background-size: 13px;
+    }
+}
+
+
+
+@media all and (max-height:890px) {
+    .table_content .table_box {
+        max-height: 706px;
+        height: 92%;
+        overflow-y: auto;
+    }
+
+    .tab-content {
+        height: calc(100% - 32px);
+    }
+}

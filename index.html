@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/main_style.css">
+    <link rel="stylesheet" href="style/font.css">
+</head>
+
+<body>
+    <section class="dashboard">
+        <div class="menu_content">
+            <div class="menu_box">
+                <ul class="menu_list">
+                    <li class="logo"><a href=""><img alt="" src="img/Logo.svg" class="menu_icon"></a></li>
+                    <li><a class="active menu_item">
+                            <img alt="" src="img/icon1.png" class="menu_icon icon_24 hover">
+                            <img alt="" src="img/icon1_white.png" class="menu_icon icon_24 ">
+                            <span>Dashboard</span></a></li>
+                    <li><a class="menu_item carriers_show">
+                            <img alt="" src="img/Truck_white.png" class="menu_icon icon_24">
+                            <img alt="" src="img/Truck.png" class="menu_icon icon_24 hover">
+
+                            <span>Carriers</span></a></li>
+                    <li><a class="menu_item">
+                            <img alt="" src="img/icon2_white.png" class="menu_icon icon_24">
+                            <img alt="" src="img/icon2.png" class="menu_icon icon_24 hover">
+                            <span>Channels</span></a></li>
+                    <li><a class="menu_item">
+                            <img alt="" src="img/FilePlus_white.png" class="menu_icon icon_24">
+                            <img alt="" src="img/FilePlus.png" class="menu_icon icon_24 hover">
+                            <span>Making report</span></a></li>
+                    <li><a class="menu_item">
+                            <img alt="" src="img/Archive_white.png" class="menu_icon icon_24">
+                            <img alt="" src="img/Archive.png" class="menu_icon icon_24 hover">
+                            <span>Products</span></a></li>
+                    <li><a class="menu_item">
+                            <img alt="" src="img/GearSix_white.png" class="menu_icon icon_24">
+                            <img alt="" src="img/GearSix.png" class="menu_icon icon_24 hover">
+                            <span>Settings</span></a></li>
+                </ul>
+                <div class="menu_bottom">
+                    <p class="text_user">cn</p>
+                    <div class="avatar"></div>
+                    <div class="pop_up_show avatar_pop_up_show">
+                        <div class="pop_up_box pop_up_right">
+                            <ul>
+                                <li><a href=""><img alt="" src="img/Key.png" class="list_icon">Change Password</a></li>
+                                <li><a href=""><img alt="" src="img/circle.png" class="list_icon">2FA</a></li>
+                                <li><a href=""><img alt="" src="img/SignOut.png" class="list_icon">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category_box carriers_box">
+                <div class="category_header">
+                    <a class="header_btn">
+                        <img alt="" src="img/Truck.png" class="icon_20">
+                        Carriers</a>
+                    <a class="header_btn close_btn">
+                        <img alt="" src="img/Close.png" class="icon_18">
+                    </a>
+                </div>
+                <div class="category_content">
+                    <a class="btn">Open manage carriers</a>
+                    <a class="open_list category_name"> Royal Mail <img alt="" src="img/arrow_down.png" class="icon_16"></a>
+                    <ul class="category_list">
+                        <li>Settings</li>
+                        <li>Manifest</li>
+                    </ul>
+                    <a class="category_name"> DPD</a>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="content_box">
+            <div class="header_box">
+                <div class="tools_box">
+                    <a class="btn active add_btn">Add new</a>
+                    <a class="btn active scan_btn">Scan</a>
+                    <input type="search" class="search_input" placeholder="Search">
+                    <input id="date_from" type="date" value="2022-01-14" class="date_input">
+                    <p class="text">to</p>
+                    <input id="date_to" type="date" value="2022-01-14" class="date_input">
+                </div>
+                <div class="help_box">
+                    <p class="text_btn">
+                        <img alt="" src="img/Question_blue.png" class="icon_16 icon"> Help
+                    </p>
+                    <div class="pop_up_show help_pop_up_show">
+                        <div class="pop_up_box pop_up_bottom">
+                            <ul>
+                                <li><a href=""><img alt="" src="img/Books.png" class="list_icon">Knowledge base</a></li>
+                                <li><a href=""><img alt="" src="img/Headset.png" class="list_icon">Live chat</a></li>
+                                <li><a href=""><img alt="" src="img/Phone.png" class="list_icon">0117 9265511</a></li>
+                                <li><a href=""><img alt="" src="img/mail.png" class="list_icon">Email us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table_content">
+                <div class="tabs js-tabs">
+                    <div class="tabs__container">
+                        <div class="header">
+
+                            <div class="tabs__links tabs" id="content">
+                                <a data-tab-target="#tab-1" class="tab_btn tab">
+                                    All shipments <img alt="icon" src="img/GearSix_gray.png" class="icon icon_16">
+                                </a>
+
+                                <a data-tab-target="#tab-2" class="tab_btn tab">
+                                    Ready to pint <img alt="icon" src="img/GearSix_gray.png" class="icon icon_16">
+                                </a>
+
+                                <a data-tab-target="#tab-3" class="active tab_btn tab">
+                                    Waiting to ship <img alt="icon" src="img/GearSix_gray.png" class="icon icon_16">
+                                </a>
+
+                                <a data-tab-target="#tab-4" class="tab_btn tab">
+                                    Failed <img alt="icon" src="img/GearSix_gray.png" class="icon icon_16">
+                                </a>
+
+                                <a data-tab-target="#tab-5" class="tab_btn tab">
+                                    Ignored <img alt="icon" src="img/GearSix_gray.png" class="icon icon_16">
+                                </a>
+
+                                <a data-tab-target="#tab-6" class="tab_btn tab">
+                                    Example of more data <img alt="icon" src="img/GearSix_gray.png" class="icon icon_16">
+                                </a>
+
+                                <a data-tab-target="#tab-7" class="tab_btn tab">
+                                    New dashboard <img alt="icon" src="img/GearSix_gray.png" class="icon icon_16">
+                                </a>
+
+                                <a data-tab-target="#tab-8" class="tab_btn tab">
+                                    New dashboard2 <img alt="icon" src="img/GearSix_gray.png" class="icon icon_16">
+                                </a>
+
+                                <a data-tab-target="#tab-9" class="tab_btn tab">
+                                    New dashboard3 <img alt="icon" src="img/GearSix_gray.png" class="icon icon_16">
+                                </a>
+
+                                <a data-tab-target="#tab-10" class="tab_btn tab">
+                                    New dashboard4 <img alt="icon" src="img/GearSix_gray.png" class="icon icon_16">
+                                </a>
+
+                                <a data-tab-target="#tab-11" class="tab_btn tab">
+                                    New dashboard5 <img alt="icon" src="img/GearSix_gray.png" class="icon icon_16">
+                                </a>
+
+                                <a data-tab-target="#tab-12" class="tab_btn tab">
+                                    New dashboard6 <img alt="icon" src="img/GearSix_gray.png" class="icon icon_16">
+                                </a>
+                                <a data-tab-target="#tab-13" class="tab_btn tab">
+                                    New dashboard7 <img alt="icon" src="img/GearSix_gray.png" class="icon icon_16">
+                                </a>
+                                <a data-tab-target="#tab-14" class="tab_btn tab">
+                                    New dashboard8 <img alt="icon" src="img/GearSix_gray.png" class="icon icon_16">
+                                </a>
+
+                            </div>
+                            <a class="smal_btn blue_btn"><img alt="icon" src="img/Plus_white.png" class="icon icon_16"></a>
+                            <a class="smal_btn white_btn tabs__button tabs__button--prev js-button-prev" id="left-button"><img alt="icon" src="img/CaretLeft.png" class="icon icon_16"></a>
+                            <a class="smal_btn white_btn tabs__button tabs__button--next js-button-next" id="right-button"><img alt="icon" src="img/CaretLeft.png" class="icon icon_16"></a>
+
+                        </div>
+                        <div class="tabs__contents tab-content">
+                            <div id="tab-1" class="tabs__contents-item" data-tab-content>
+                                tab 1
+                            </div>
+                            <div id="tab-2" class="tabs__contents-item" data-tab-content>
+                                tab 2
+                            </div>
+                            <div id="tab-3" class="tabs__contents-item active" data-tab-content>
+                                <div class="tab_content">
+                                    <div class="table_box">
+                                        <table class="table" id="pager">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheckAll" onClick="toggle(this)">
+                                                            <label for="tableCheckAll"></label>
+                                                        </div>
+                                                    </th>
+                                                    <th><a class="table_item">Shipment ID<img alt="icon" src="img/Sort.png" class="icon icon_16"></a></th>
+                                                    <th><a class="table_item">Order ID<img alt="icon" src="img/Sort.png" class="icon icon_16"></a></th>
+                                                    <th><a class="table_item">Created date<img alt="icon" src="img/Sort.png" class="icon icon_16"></a></th>
+                                                    <th><a class="table_item">Customer name<img alt="icon" src="img/Sort.png" class="icon icon_16"></a></th>
+                                                    <th><a class="table_item">City<img alt="icon" src="img/Sort.png" class="icon icon_16"></a></th>
+                                                    <th><a class="table_item">Country<img alt="icon" src="img/Sort.png" class="icon icon_16"></a></th>
+                                                    <th><a class="table_item">Value<img alt="icon" src="img/Sort.png" class="icon icon_16"></a></th>
+                                                    <th><a class="table_item">Weight<img alt="icon" src="img/Sort.png" class="icon icon_16"></a></th>
+                                                    <th><a class="table_item">Carrier<img alt="icon" src="img/Sort.png" class="icon icon_16"></a></th>
+                                                    <th><a class="table_item">Service<img alt="icon" src="img/Sort.png" class="icon icon_16"></a></th>
+                                                    <th><a class="table_item">Channel<img alt="icon" src="img/Sort.png" class="icon icon_16"></a></th>
+                                                    <th><a class="table_item">Status<img alt="icon" src="img/Sort.png" class="icon icon_16"></a></th>
+                                                    <th><a class="table_item">Telephone<img alt="icon" src="img/Sort.png" class="icon icon_16"></a></th>
+                                                    <th><a class="table_item">Terms of trade<img alt="icon" src="img/Sort.png" class="icon icon_16"></a></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheck1" class="checkbox" name="checkbox_row">
+                                                            <label for="tableCheck1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>283921039</td>
+                                                    <td>283921039</td>
+                                                    <td>12/10/13</td>
+                                                    <td>Guy Hawkins</td>
+                                                    <td>London</td>
+                                                    <td>UK</td>
+                                                    <td>150</td>
+                                                    <td>1</td>
+                                                    <td>DPD</td>
+                                                    <td>N/A</td>
+                                                    <td>Api</td>
+                                                    <td>Ignored</td>
+                                                    <td>34392839328</td>
+                                                    <td>34392839328</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheck2" class="checkbox" name="checkbox_row">
+                                                            <label for="tableCheck2"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>283921039</td>
+                                                    <td>283921039</td>
+                                                    <td>12/10/13</td>
+                                                    <td>Guy Hawkins</td>
+                                                    <td>London</td>
+                                                    <td>UK</td>
+                                                    <td>150</td>
+                                                    <td>1</td>
+                                                    <td>DPD</td>
+                                                    <td>N/A</td>
+                                                    <td>Api</td>
+                                                    <td>Ignored</td>
+                                                    <td>34392839328</td>
+                                                    <td>34392839328</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheck3" class="checkbox" name="checkbox_row">
+                                                            <label for="tableCheck3"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>283921039</td>
+                                                    <td>283921039</td>
+                                                    <td>12/10/13</td>
+                                                    <td>Guy Hawkins</td>
+                                                    <td>London</td>
+                                                    <td>UK</td>
+                                                    <td>150</td>
+                                                    <td>1</td>
+                                                    <td>DPD</td>
+                                                    <td>N/A</td>
+                                                    <td>Api</td>
+                                                    <td>Ignored</td>
+                                                    <td>34392839328</td>
+                                                    <td>34392839328</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheck4" class="checkbox" name="checkbox_row">
+                                                            <label for="tableCheck4"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>283921039</td>
+                                                    <td>283921039</td>
+                                                    <td>12/10/13</td>
+                                                    <td>Guy Hawkins</td>
+                                                    <td>London</td>
+                                                    <td>UK</td>
+                                                    <td>150</td>
+                                                    <td>1</td>
+                                                    <td>DPD</td>
+                                                    <td>N/A</td>
+                                                    <td>Api</td>
+                                                    <td>Ignored</td>
+                                                    <td>34392839328</td>
+                                                    <td>34392839328</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheck5" class="checkbox" name="checkbox_row">
+                                                            <label for="tableCheck5"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>283921039</td>
+                                                    <td>283921039</td>
+                                                    <td>12/10/13</td>
+                                                    <td>Guy Hawkins</td>
+                                                    <td>London</td>
+                                                    <td>UK</td>
+                                                    <td>150</td>
+                                                    <td>1</td>
+                                                    <td>DPD</td>
+                                                    <td>N/A</td>
+                                                    <td>Api</td>
+                                                    <td>Ignored</td>
+                                                    <td>34392839328</td>
+                                                    <td>34392839328</td>
+                                                </tr>
+                                                <tr class="error">
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheck6" class="checkbox" name="checkbox_row">
+                                                            <label for="tableCheck6"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>283921039</td>
+                                                    <td>283921039</td>
+                                                    <td>12/10/13</td>
+                                                    <td>Guy Hawkins</td>
+                                                    <td>London</td>
+                                                    <td>UK</td>
+                                                    <td>150</td>
+                                                    <td>1</td>
+                                                    <td>DPD</td>
+                                                    <td>N/A</td>
+                                                    <td>Api</td>
+                                                    <td>Ignored</td>
+                                                    <td>34392839328</td>
+                                                    <td>34392839328</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheck7" class="checkbox" name="checkbox_row">
+                                                            <label for="tableCheck7"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>283921039</td>
+                                                    <td>283921039</td>
+                                                    <td>12/10/13</td>
+                                                    <td>Guy Hawkins</td>
+                                                    <td>London</td>
+                                                    <td>UK</td>
+                                                    <td>150</td>
+                                                    <td>1</td>
+                                                    <td>DPD</td>
+                                                    <td>N/A</td>
+                                                    <td>Api</td>
+                                                    <td>Ignored</td>
+                                                    <td>34392839328</td>
+                                                    <td>34392839328</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheck8" class="checkbox" name="checkbox_row">
+                                                            <label for="tableCheck8"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>283921039</td>
+                                                    <td>283921039</td>
+                                                    <td>12/10/13</td>
+                                                    <td>Guy Hawkins</td>
+                                                    <td>London</td>
+                                                    <td>UK</td>
+                                                    <td>150</td>
+                                                    <td>1</td>
+                                                    <td>DPD</td>
+                                                    <td>N/A</td>
+                                                    <td>Api</td>
+                                                    <td>Ignored</td>
+                                                    <td>34392839328</td>
+                                                    <td>34392839328</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheck9" class="checkbox" name="checkbox_row">
+                                                            <label for="tableCheck9"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>283921039</td>
+                                                    <td>283921039</td>
+                                                    <td>12/10/13</td>
+                                                    <td>Guy Hawkins</td>
+                                                    <td>London</td>
+                                                    <td>UK</td>
+                                                    <td>150</td>
+                                                    <td>1</td>
+                                                    <td>DPD</td>
+                                                    <td>N/A</td>
+                                                    <td>Api</td>
+                                                    <td>Ignored</td>
+                                                    <td>34392839328</td>
+                                                    <td>34392839328</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheck10" class="checkbox" name="checkbox_row">
+                                                            <label for="tableCheck10"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>283921039</td>
+                                                    <td>283921039</td>
+                                                    <td>12/10/13</td>
+                                                    <td>Guy Hawkins</td>
+                                                    <td>London</td>
+                                                    <td>UK</td>
+                                                    <td>150</td>
+                                                    <td>1</td>
+                                                    <td>DPD</td>
+                                                    <td>N/A</td>
+                                                    <td>Api</td>
+                                                    <td>Ignored</td>
+                                                    <td>34392839328</td>
+                                                    <td>34392839328</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheck11" class="checkbox" name="checkbox_row">
+                                                            <label for="tableCheck11"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>283921039</td>
+                                                    <td>283921039</td>
+                                                    <td>12/10/13</td>
+                                                    <td>Guy Hawkins</td>
+                                                    <td>London</td>
+                                                    <td>UK</td>
+                                                    <td>150</td>
+                                                    <td>1</td>
+                                                    <td>DPD</td>
+                                                    <td>N/A</td>
+                                                    <td>Api</td>
+                                                    <td>Ignored</td>
+                                                    <td>34392839328</td>
+                                                    <td>34392839328</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheck12" class="checkbox" name="checkbox_row">
+                                                            <label for="tableCheck12"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>283921039</td>
+                                                    <td>283921039</td>
+                                                    <td>12/10/13</td>
+                                                    <td>Guy Hawkins</td>
+                                                    <td>London</td>
+                                                    <td>UK</td>
+                                                    <td>150</td>
+                                                    <td>1</td>
+                                                    <td>DPD</td>
+                                                    <td>N/A</td>
+                                                    <td>Api</td>
+                                                    <td>Ignored</td>
+                                                    <td>34392839328</td>
+                                                    <td>34392839328</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheck13" class="checkbox" name="checkbox_row">
+                                                            <label for="tableCheck13"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>283921039</td>
+                                                    <td>283921039</td>
+                                                    <td>12/10/13</td>
+                                                    <td>Guy Hawkins</td>
+                                                    <td>London</td>
+                                                    <td>UK</td>
+                                                    <td>150</td>
+                                                    <td>1</td>
+                                                    <td>DPD</td>
+                                                    <td>N/A</td>
+                                                    <td>Api</td>
+                                                    <td>Ignored</td>
+                                                    <td>34392839328</td>
+                                                    <td>34392839328</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheck14" class="checkbox" name="checkbox_row">
+                                                            <label for="tableCheck14"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>283921039</td>
+                                                    <td>283921039</td>
+                                                    <td>12/10/13</td>
+                                                    <td>Guy Hawkins</td>
+                                                    <td>London</td>
+                                                    <td>UK</td>
+                                                    <td>150</td>
+                                                    <td>1</td>
+                                                    <td>DPD</td>
+                                                    <td>N/A</td>
+                                                    <td>Api</td>
+                                                    <td>Ignored</td>
+                                                    <td>34392839328</td>
+                                                    <td>34392839328</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheck15" class="checkbox" name="checkbox_row">
+                                                            <label for="tableCheck15"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>283921039</td>
+                                                    <td>283921039</td>
+                                                    <td>12/10/13</td>
+                                                    <td>Guy Hawkins</td>
+                                                    <td>London</td>
+                                                    <td>UK</td>
+                                                    <td>150</td>
+                                                    <td>1</td>
+                                                    <td>DPD</td>
+                                                    <td>N/A</td>
+                                                    <td>Api</td>
+                                                    <td>Ignored</td>
+                                                    <td>34392839328</td>
+                                                    <td>34392839328</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="tableCheck16" class="checkbox" name="checkbox_row">
+                                                            <label for="tableCheck16"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>283921039</td>
+                                                    <td>283921039</td>
+                                                    <td>12/10/13</td>
+                                                    <td>Guy Hawkins</td>
+                                                    <td>London</td>
+                                                    <td>UK</td>
+                                                    <td>150</td>
+                                                    <td>1</td>
+                                                    <td>DPD</td>
+                                                    <td>N/A</td>
+                                                    <td>Api</td>
+                                                    <td>Ignored</td>
+                                                    <td>34392839328</td>
+                                                    <td>34392839328</td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+                                    <div class="selected_box">
+                                        <p class="number_selected">2 items selected</p>
+                                        <div class="btn_box">
+                                            <ul class="btn_list">
+                                                <li>
+                                                    <a class="selected_btn">
+                                                        <img alt="" src="img/FilePlus_white_transp.png" class="icon_16">
+                                                        <span>Create label</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="selected_btn">
+                                                        <img alt="" src="img/UploadSimple_white.png" class="icon_16">
+                                                        <span>Download</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="selected_btn">
+                                                        <img alt="" src="img/Printer_white.png" class="icon_16">
+                                                        <span>Print</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="selected_btn">
+                                                        <img alt="" src="img/Archive1_white.png" class="icon_16">
+                                                        <span>Archive</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="selected_btn">
+                                                        <img alt="" src="img/File_white.png" class="icon_16">
+                                                        <span>Export to CSV</span></a>
+                                                </li>
+                                            </ul>
+
+                                            <a class="selected_btn">Cancel</a>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="paginator_box">
+                                        <div class="paginator_content">
+                                            <a class="smal_btn blue_btn settings_btn"><img alt="icon" src="img/GearSix_white_transp.png" class="icon icon_16"></a>
+                                            <p class="text">Showing</p>
+                                            <input type="text" class="text_input small_input" value="10">
+                                            <p class="text">out of 5 shipments</p>
+                                        </div>
+                                        <div class="paginator_content" id="pageNavPosition">
+                                            <a class="smal_btn blue_btn prev"><img alt="icon" src="img/CaretLeft_white.png" class="icon icon_16"></a>
+                                            <p class="text">1/1</p>
+                                            <a class="smal_btn blue_btn next"><img alt="icon" src="img/CaretLeft_white.png" class="icon icon_16"></a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div id="tab-4" class="tabs__contents-item" data-tab-content>
+                                tab 4
+                                <p>(Test im test data)</p>
+                            </div>
+                            <div id="tab-5" class="tabs__contents-item" data-tab-content>
+                                tab 5
+                            </div>
+                            <div id="tab-6" class="tabs__contents-item" data-tab-content>
+                                tab 6
+                            </div>
+                            <div id="tab-7" class="tabs__contents-item" data-tab-content>
+                                tab 7
+                            </div>
+                            <div id="tab-8" class="tabs__contents-item" data-tab-content>
+                                tab 8
+                            </div>
+                            <div id="tab-9" class="tabs__contents-item" data-tab-content>
+                                tab 9
+                            </div>
+                            <div id="tab-10" class="tabs__contents-item" data-tab-content>
+                                tab 10
+                            </div>
+                            <div id="tab-11" class="tabs__contents-item" data-tab-content>
+                                tab 11
+                            </div>
+                            <div id="tab-12" class="tabs__contents-item" data-tab-content>
+                                tab 12
+                            </div>
+                            <div id="tab-13" class="tabs__contents-item" data-tab-content>
+                                tab 13
+                            </div>
+                            <div id="tab-14" class="tabs__contents-item" data-tab-content>
+                                tab 14
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="script/dashboard_script.js"></script>
+
+
+</body>
+
+</html>

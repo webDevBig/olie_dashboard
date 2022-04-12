@@ -1,0 +1,83 @@
+/*paginator*/
+.paginator_box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ECF2F7;
+    padding: 0px;
+}
+
+.paginator_content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 0;
+}
+
+.paginator_content .smal_btn {
+    border-radius: 4px;
+}
+
+.paginator_content .settings_btn {
+    margin: 0 16px 0 0;
+}
+
+.paginator_content .text {
+    font-size: 12px;
+    line-height: 14px;
+    color: #081E2E;
+    margin: 0 8px;
+}
+
+.paginator_content .next img {
+    transform: rotate(-180deg)
+}
+
+.paginator_content .next {
+    margin: 0 0 0 4px;
+}
+
+.paginator_content .prev {
+    margin: 0 4px 0 0;
+}
+
+.smal_btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+    float: left;
+}
+
+.blue_btn {
+    background: #53A5E0;
+}
+
+.text_input {
+    background: #FFFFFF;
+    border: 1px solid #ECF2F7;
+    box-sizing: border-box;
+}
+
+.text_input.small_input {
+    width: 48px;
+    height: 32px;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #081E2E;
+}
+
+@media all and (max-width:600px) {
+
+    .paginator_box {
+        flex-wrap: wrap;
+            padding: 0 10px;
+    }
+}

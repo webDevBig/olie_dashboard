@@ -1,0 +1,159 @@
+/*menu style*/
+
+.logo {
+    width: 94px;
+    height: 94px;
+    background: #53A5E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a {
+    height: 29px;
+}
+
+
+.menu_box {
+    background-color: #53A5E0;
+    height: 100vh;
+    width: 94px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 11;
+}
+
+.menu_list li.logo {
+    margin: 0;
+}
+
+.menu_list li.logo img {
+    margin: 0;
+}
+
+.menu_box .menu_bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 27px 0;
+    position: relative;
+    width: 100%;
+}
+
+.menu_box .text_user {
+    margin: 0 0 16px;
+}
+
+.menu_list .menu_item .hover {
+    display: none;
+}
+
+.menu_box .menu_list .menu_item:hover .menu_icon {
+    display: none;
+}
+
+.menu_box .menu_list .menu_item:hover .hover {
+    display: flex;
+}
+
+.menu_box .menu_list .menu_item:hover {
+    background: #F7FBFF;
+    color: #081E2E;
+}
+
+.menu_box .menu_list .active .menu_icon {
+    display: none;
+}
+
+.menu_box .menu_list .active .hover {
+    display: flex;
+}
+
+
+
+
+.menu_btn {
+    background: #53A5E0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px dashed #7B61FF;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+.menu_list {
+    background: #53A5E0;
+    box-sizing: border-box;
+    width: fit-content;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_list li {
+    margin: 4px 0;
+}
+
+.menu_btn li {
+    margin: 10px 0;
+}
+
+.menu_list .menu_item {
+    width: 94px;
+    padding: 8px 0px;
+    text-decoration: none;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #E7F5FF;
+    font-family: 'Futura Std Book';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.menu_list a.active {
+    background: #F7FBFF;
+    color: #081E2E;
+}
+
+.menu_list .menu_icon {
+    margin: 0 0 6px;
+}
+
+@media all and (max-height:635px) {
+    .menu_box .logo {
+        height: 60px;
+    }
+
+    .menu_box .menu_list li {
+        margin: 0;
+    }
+
+    .menu_box .menu_box .menu_bottom {
+        padding: 15px 0;
+    }
+}
+
+@media all and (max-height:545px) {
+    .menu_box .menu_list .menu_icon {
+        margin: 0;
+    }
+
+    .menu_box .menu_list .menu_item span {
+        display: none;
+    }
+
+    .menu_box {
+        min-height: 440px;
+    }
+}

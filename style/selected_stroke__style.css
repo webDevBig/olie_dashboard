@@ -1,0 +1,67 @@
+/*Selected stroke*/
+
+
+.selected_box {
+    width: 100%;
+    max-width: 1286px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 22px 15px 30px;
+    background: #081E2E;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.selected_box .btn_box {
+    display: flex;
+    align-items: center;
+}
+
+.selected_box .btn_list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    list-style: none;
+    margin: 0 40px 0 0;
+}
+
+.selected_box .selected_btn {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.selected_box .selected_btn img {
+    margin: 0 8px 0 0;
+}
+
+@media all and (max-width:800px) {
+    .selected_box {
+        padding: 15px 7px 15px 15px;
+    }
+
+    .selected_box .btn_list {
+        margin: 0;
+    }
+
+    .selected_box {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
+@media all and (max-width:600px) {
+
+    .selected_box .selected_btn span {
+        display: none;
+    }
+
+    .selected_box .selected_btn img {
+        margin: 0;
+    }
+}
