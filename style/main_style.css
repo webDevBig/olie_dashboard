@@ -692,6 +692,7 @@ body {
         line-height: 15px;
         background-position: 96px center;
         text-align: left;
+        background-color: red;
     }
 
     .paginator_box {
