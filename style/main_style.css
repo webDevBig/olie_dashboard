@@ -210,7 +210,7 @@ body {
     border: 1px solid #ECF2F7;
     box-sizing: border-box;
     border-radius: 4px;
-    padding: 0 0px 0 12px;
+    padding: 0 0px 0 10px;
     font-size: 14px;
     line-height: 17px;
     color: #081E2E;
@@ -219,10 +219,12 @@ body {
     box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
+/*
     background-image: url(../img/CalendarBlank.png);
     background-position: 111px center;
     background-repeat: no-repeat;
     background-size: 18px;
+*/
     font-family: 'Futura Std Book';
     cursor: pointer;
 }
