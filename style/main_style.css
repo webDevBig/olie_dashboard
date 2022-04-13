@@ -219,13 +219,10 @@ body {
     box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
-/*
     background-image: url(../img/CalendarBlank.png);
-    background-position: 111px center;
+    background-position: 124px center;
     background-repeat: no-repeat;
-    background-size: 18px;
-*/
-    font-family: 'Futura Std Book';
+    background-size: 18px;    font-family: 'Futura Std Book';
     cursor: pointer;
 }
 
@@ -245,7 +242,7 @@ body {
      background-image: url(../img/CalendarBlank.png);
     background-position: center;
     background-size: 18px;
-/*    opacity: 0;*/
+    opacity: 0;
     cursor: pointer;
     width: 25px;
 }
