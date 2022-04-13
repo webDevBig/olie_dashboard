@@ -222,7 +222,8 @@ body {
     background-image: url(../img/CalendarBlank.png);
     background-position: 124px center;
     background-repeat: no-repeat;
-    background-size: 18px;    font-family: 'Futura Std Book';
+    background-size: 18px;
+    font-family: 'Futura Std Book';
     cursor: pointer;
 }
 
@@ -233,18 +234,19 @@ body {
 }
 
 .date_input::-webkit-inner-spin-button {
-/*    display: none;*/
-   
+    /*    display: none;*/
+
 }
 
 
 .date_input::-webkit-calendar-picker-indicator {
-     background-image: url(../img/CalendarBlank.png);
+    background-image: url(../img/CalendarBlank.png);
     background-position: center;
     background-size: 18px;
     opacity: 0;
     cursor: pointer;
-    width: 25px;
+    display: none;
+    /*    width: 25px;*/
 }
 
 /*Icon + text button*/
