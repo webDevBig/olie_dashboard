@@ -19,13 +19,13 @@
 
 .table td {
     padding: 13px 8px;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 14px;
     color: #081E2E;
 }
 
 .table_item {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 14px;
     color: #76828A;
     text-decoration: none;
@@ -61,6 +61,14 @@
 }
 
 
+
+@media all and (max-width:1439px) {
+
+    .table_item,
+    .table td {
+        font-size: 12px;
+    }
+}
 
 @media all and (max-width:1300px) {
 
