@@ -36,16 +36,20 @@
 
 .table tbody tr {
     border-bottom: 1px solid #ECF2F7;
+    cursor: pointer;
+}
 
+.table tbody tr:hover {
+    background: #F7FBFF;
 }
 
 .table tr td:first-of-type {
     border-left: 2px solid white;
 }
 
-.error {
+.error,
+.table tbody tr.error:hover {
     background-color: #FFF5F5;
-
 }
 
 .table .error td:first-of-type {

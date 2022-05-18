@@ -35,6 +35,12 @@
     cursor: pointer;
 }
 
+.selected_box .btn_list .selected_btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+
 .selected_box .selected_btn img {
     margin: 0 8px 0 0;
 }

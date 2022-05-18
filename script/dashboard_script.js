@@ -186,8 +186,26 @@ help_box.addEventListener("click", function (event) {
 //open carriers box
 var carriers_show = document.querySelector('.carriers_show');
 var carriers_box = document.querySelector('.carriers_box');
+
+var close_menu = document.querySelectorAll('.close_btn');
 carriers_show.addEventListener("click", function (event) {
     carriers_box.classList.toggle('show')
+});
+
+//open settings box
+var settings_show = document.querySelector('.settings_show');
+var settings_box = document.querySelector('.settings_box');
+settings_show.addEventListener("click", function (event) {
+    settings_box.classList.toggle('show')
+});
+
+
+close_menu.forEach(function (el, key) {
+
+    el.addEventListener('click', function () {
+        el.parentElement.parentElement.classList.toggle("show");
+
+    });
 });
 
 
@@ -216,9 +234,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // Detect all clicks on the document
 document.addEventListener("click", function (event) {
     // If user clicks inside the element, do nothing
-    if (event.target.closest(".carriers_show")) return;
+    if (event.target.closest(".carriers_show, .carriers_box")) return;
 
     // If user clicks outside the element, hide it!
 
     carriers_box.classList.remove('show')
+
+});
+document.addEventListener("click", function (event) {
+
+    if (event.target.closest(".settings_show, .settings_box")) return;
+
+    //      If user clicks outside the element, hide it!  
+    settings_box.classList.remove('show')
+});
+
+
+
+
+var open_list = document.querySelectorAll('.open_list');
+open_list.forEach(function (el, key) {
+
+    el.addEventListener('click', function () {
+        el.parentElement.classList.toggle("show");
+    });
 });
