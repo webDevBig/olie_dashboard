@@ -35,7 +35,7 @@
     cursor: pointer;
 }
 
-.selected_box .btn_list .selected_btn:hover {
+.selected_box .selected_btn:hover {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
 }
