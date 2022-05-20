@@ -161,6 +161,10 @@ body {
     background-color: #53A5E0;
 }
 
+.btn.active:hover {
+    background: #408FC8;
+}
+
 .btn.add_btn::before {
     background-image: url(../img/Plus_white.png);
 }
@@ -334,9 +338,17 @@ body {
     background: #53A5E0;
 }
 
+.blue_btn:hover {
+    background: #408FC8;
+}
+
 .white_btn {
     background: #FFFFFF;
     border: 1px solid #ECF2F7;
+}
+
+.white_btn:hover {
+    border: 1px solid #53A5E0;
 }
 
 .avatar {
@@ -568,8 +580,8 @@ body {
     color: #76858F;
     cursor: pointer;
 }
-.category_box .category_list li:hover
-{
+
+.category_box .category_list li:hover {
     color: #53A5E0;
 }
 
@@ -601,19 +613,18 @@ body {
 .settings_box .accordion_box:first-of-type .category_name {
     padding: 0;
 }
-.settings_box .accordion_box:last-of-type
-{
+
+.settings_box .accordion_box:last-of-type {
     border: none;
 }
-.settings_box .accordion_box:last-of-type .category_list
-{
+
+.settings_box .accordion_box:last-of-type .category_list {
     padding: 7px 0 0px;
 }
 
 /* width */
-.table_box::-webkit-scrollbar, 
-.category_box::-webkit-scrollbar 
-{
+.table_box::-webkit-scrollbar,
+.category_box::-webkit-scrollbar {
     width: 9px;
     height: 9px;
     background-color: white;
@@ -632,6 +643,45 @@ body {
     background-color: #53A5E0;
     border-radius: 7px;
     border: 2px solid #ffffff;
+}
+
+
+/*error message style*/
+.error_box {
+    width: 100%;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px;
+    position: absolute;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #081E2E;
+    background: #FFF0F0;
+    border-radius: 4px;
+    bottom: 94px;
+}
+
+.error_box.show {
+    display: flex;
+}
+
+.error_box img {
+    margin: 0 12px 0 0;
+    max-width: 32px;
+}
+
+.error_box .close_message {
+    position: absolute;
+    right: 12px;
+    background-image: url(../img/Close_gray.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 16px;
+    height: 16px;
 }
 
 @media all and (max-width:1200px) {
