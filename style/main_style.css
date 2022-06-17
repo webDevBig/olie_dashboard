@@ -704,10 +704,9 @@ body {
     align-items: center;
     position: absolute;
     top: -132px;
-    left: 100%;
 }
-.archive_menu.show .archive_menuBox
-{
+
+.archive_menu.show .archive_menuBox {
     display: flex;
 }
 
@@ -799,6 +798,17 @@ body {
     }
 }
 
+@media all and (max-width:1000px) {
+    .selected_box .btn_list {
+        margin: 0;
+    }
+
+    .selected_box {
+        padding: 15px 10px 15px 18px;
+        font-size: 13px;
+    }
+}
+
 @media all and (max-width:900px) {
 
     .content_box .search_input {
@@ -807,6 +817,10 @@ body {
 
     .content_box .tools_box {
         width: 94%;
+    }
+
+    .selected_box .selected_btn span {
+        display: none;
     }
 }
 
@@ -832,7 +846,7 @@ body {
     }
 }
 
-@media all and (max-width:500px) {
+@media all and (max-width:530px) {
     .menu_list .menu_item span {
         display: none;
     }
@@ -874,6 +888,34 @@ body {
     .avatar_pop_up_show {
         left: 113%;
     }
+    .tabs__contents-item .selected_box.show
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .selected_box .btn_box
+    {
+        width: 100%;
+        justify-content: space-between;
+        margin: 10px 0 0;
+    }
+    .selected_box .selected_btn img
+    {
+        left: 0;
+    }
+    .selected_box .selected_btn
+    {
+        padding: 8px;
+        margin: 0 20px 0 0;
+    }
+    .selected_box li:last-of-type .selected_btn
+    {
+        margin: 0;
+    }
+    .selected_box .selected_btn.cancel_btn
+    {
+        margin: 0;
+    }
 }
 
 @media all and (max-width:375px) {
@@ -888,10 +930,13 @@ body {
     .paginator_content .settings_btn {
         margin: 0;
     }
+    .table_content {
+    height: calc(100% - 305px);
+}
 
 }
 
-@media all and (max-width:340px) {
+@media all and (max-width:350px) {
     .date_input {
         width: 97px;
         padding: 0 1px;
@@ -899,6 +944,16 @@ body {
         line-height: 15px;
         background-position: 78px center;
         background-size: 13px;
+    }
+    .selected_box .btn_box
+    {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .error_box.show p
+    {
+        max-width: 70%;
     }
 }
 
