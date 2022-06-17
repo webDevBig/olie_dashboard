@@ -270,44 +270,56 @@ close_message.addEventListener("click", function (event) {
 });
 
 
+//open dropdown on printing button
+var open_print_menu = document.querySelector('.print_btn');
+
+open_print_menu.addEventListener("click", function (event) {
+    this.parentElement.classList.toggle('show')
+});
+
+document.addEventListener("click", function (event) {
+    // If user clicks inside the element, do nothing
+    if (event.target.closest(".archive_menu")) return;
+
+    // If user clicks outside the element, hide it!
+
+    open_print_menu.parentElement.classList.remove('show')
+});
+
+
 
 
 var open_table_popUp = document.querySelectorAll('.table tr');
 
-//document.addEventListener("DOMContentLoaded", function (event) {
-//    if (open_table_popUp) {
-//
-//        open_table_popUp.forEach(function (el, key) {
-//
-//            el.addEventListener('click', function () {
-//                console.log(key);
-//
-//                el.classList.toggle("show");
-//
-//                open_table_popUp.forEach(function (ell, els) {
-//                    if (key !== els) {
-//                        ell.classList.remove('show');
-//                    }
-//                    console.log(els);
-//                });
-//            });
-//        });
-//    }
-//});
 
 
- open_table_popUp.forEach(function (el, key) {
 
-            el.addEventListener('click', function () {
-                console.log(key);
+open_table_popUp.forEach(function (el, key) {
 
-                el.classList.toggle("show");
+    el.addEventListener('click', function () {
+      
+        el.classList.toggle("show");
 
-                open_table_popUp.forEach(function (ell, els) {
-                    if (key !== els) {
-                        ell.classList.remove('show');
-                    }
-                    console.log(els);
-                });
-            });
+        open_table_popUp.forEach(function (ell, els) {
+            if (key !== els) {
+                ell.classList.remove('show');
+            }
+        
         });
+    });
+});
+
+
+
+//add loader state
+
+var loader_show = document.querySelectorAll('.selectedLoader_btn');
+loader_show.forEach(function (el, key) {
+
+    el.addEventListener('click', function () {
+        el.classList.toggle("loading");
+        setTimeout(() => {
+            el.classList.toggle("loading");
+        }, 1300);
+    });
+});

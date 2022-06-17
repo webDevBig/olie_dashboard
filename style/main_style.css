@@ -667,8 +667,8 @@ body {
 .error_box.show {
     display: flex;
 }
-.error_img_box
-{
+
+.error_img_box {
     width: 32px;
     height: 32px;
     display: flex;
@@ -688,6 +688,64 @@ body {
     background-size: cover;
     width: 16px;
     height: 16px;
+}
+
+
+/* dropdown on printing button style*/
+.archive_menu {
+    position: relative;
+}
+
+
+.archive_menuBox {
+    width: 183px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -132px;
+    left: 100%;
+}
+.archive_menu.show .archive_menuBox
+{
+    display: flex;
+}
+
+.archive_menuBox ul {
+    list-style: none;
+    width: 100%;
+    height: 109px;
+    background: #081E2E;
+    border-radius: 4px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.archive_menuBox ul li {
+    width: 100%;
+    height: 23px;
+    display: flex;
+    margin: 2px 0;
+}
+
+.archive_menuBox a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 5px 12px;
+    border-radius: 4px;
+    width: 100%;
+    text-align: left;
+}
+
+.archive_menuBox a:hover {
+    background: #203442;
 }
 
 @media all and (max-width:1200px) {
